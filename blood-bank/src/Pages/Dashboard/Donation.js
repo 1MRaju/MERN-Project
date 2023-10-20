@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 const Donation = () => {
     const {user} = useSelector(state => state.auth)
-
+ 
     const [data, setData] = useState([])
     //find donar records
     const getDonars = async () => {
