@@ -28,10 +28,10 @@ app.use('/api/v1/analytics', require('./routes/analyticsRoutes'));
 app.use('/api/v1/admin', require('./routes/adminRoutes'));
 
 //static files
-app.use(express.static(path.join(__dirname, "../blood-bank/build")));
+app.use(express.static(path.join(__dirname, "./blood-bank/build")));
 
 app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "../blood-bank/build/index.html"));
+    res.sendFile(path.join(__dirname, "./blood-bank/build/index.html"));
 });
 
 //port
