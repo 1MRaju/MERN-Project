@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({baseURL:process.env.REACT_APP_BASEURL})
+const API = axios.create({baseURL:process.env.REACT_APP_BASEURL || 'https://bloodbank-app-s5ab.onrender.com'})
 
 API.interceptors.request.use((req)=>{
     if(localStorage.getItem('token')){
